@@ -986,18 +986,20 @@
 
         var _ = this;
 
-        if (event.keyCode === 37) {
-            _.changeSlide({
-                data: {
-                    message: 'previous'
-                }
-            });
-        } else if (event.keyCode === 39) {
-            _.changeSlide({
-                data: {
-                    message: 'next'
-                }
-            });
+        if (_.options.accessibility) {
+            if (event.keyCode === 37) {
+                _.changeSlide({
+                    data: {
+                        message: 'previous'
+                    }
+                });
+            } else if (event.keyCode === 39) {
+                _.changeSlide({
+                    data: {
+                        message: 'next'
+                    }
+                });
+            }
         }
 
     };
